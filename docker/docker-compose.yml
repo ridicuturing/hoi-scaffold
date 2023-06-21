@@ -6,11 +6,6 @@ services:
     networks:
       - my_network
     restart: on-failure
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      interval: 5s
-      timeout: 10s
-      retries: 120
   hoi:
     image: hoi4tech/hoi-scaffold:latest
     ports:

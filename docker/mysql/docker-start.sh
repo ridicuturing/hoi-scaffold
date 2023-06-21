@@ -1,1 +1,0 @@
-docker run --rm -ti -p 80:8080  chat2db/chat2db:latest

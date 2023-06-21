@@ -1,5 +1,15 @@
 # springboot项目初始化
 
+### 一键启动（docker compose）
+拉取项目后，在项目目录下使用docker-compose启动
+```bash
+docker compose -p hoi-scaffold -f docker/docker-compose.yml up -d
+```
+
+不想拉取项目的话，也可以直接复制[docker-compose](/docker/docker-compose.yml)文件到本地，然后用docker-compose启动
+```bash
+docker compose -p hoi-scaffold -f docker-compose.yml up -d
+```
 ### 引用
 
 - Spring Data JPA
@@ -7,7 +17,7 @@
 - lombok
 - hutool
 
-###
+### 各功能模块
 
 | 模块     | 作用                     |
 |--------|------------------------|

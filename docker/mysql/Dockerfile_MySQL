@@ -4,3 +4,7 @@ FROM mysql:8.0.33
 COPY docker/mysql/schema-mysql.sql /docker-entrypoint-initdb.d/init.sql
 
 ENV MYSQL_ROOT_PASSWORD=d4Dr1uaSDad
+
+# 健康检查
+HEALTHCHECK --interval=5s --timeout=3s --retries=120 \
+    CMD mysql -h localhost -uroot -p${MYSQL_ROOT_PASSWORD} -e 'SELECT 1' 2>/dev/null || exit 1
