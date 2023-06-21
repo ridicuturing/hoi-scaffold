@@ -1,0 +1,6 @@
+FROM mysql:8.0.33
+
+# 添加容器启动时执行SQL
+COPY docker/mysql/schema-mysql.sql /docker-entrypoint-initdb.d/init.sql
+
+ENV MYSQL_ROOT_PASSWORD=d4Dr1uaSDad
