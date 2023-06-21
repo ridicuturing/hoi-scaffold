@@ -1,0 +1,1 @@
+docker build -f docker/java/Dockerfile_java -t hoi4tech/hoi-scaffold:latest .

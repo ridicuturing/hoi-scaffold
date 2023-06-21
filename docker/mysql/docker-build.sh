@@ -1,0 +1,1 @@
+docker build  -f docker/mysql/Dockerfile_MySQL -t hoi4tech/hoi-mysql:latest .

@@ -1,0 +1,10 @@
+# 基于jdk17的镜像
+FROM openjdk:17
+# 定义进入容器时默认位置，接下来后续操作的工作位置
+WORKDIR /app
+# 将当前目录下的jar包复制到docker容器的/app 目录下
+ADD hoi-start/target/hoi.jar hoi.jar
+
+EXPOSE 8080
+# 运行jar包
+ENTRYPOINT ["java","-jar","hoi.jar"]
